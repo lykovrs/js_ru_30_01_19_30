@@ -1,14 +1,17 @@
-import React from 'react'
-import Article from './Article'
+import React from 'react';
+import Article from './Article';
 
 export default function ArticleList(props) {
-    const {articles} = props
-    const articleElements = articles.map((article) => <li key={article.id}>
+    const {articles} = props;
+    const articleElements = articles.map((article) =>
+
+    <li key={article.id}>
         <Article article={article} defaultOpen={true}/>
-    </li>)
+    </li>);
+
     return (
         <ul>
-            {articleElements}
+          {articleElements}
         </ul>
     )
 }
