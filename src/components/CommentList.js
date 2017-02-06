@@ -1,7 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Comment from './Comment'
 
 class CommentList extends Component {
+    static propTypes = {
+      comments: React.PropTypes.arrayOf(
+        React.PropTypes.shape({
+          user: PropTypes.string.isRequired,
+          text: PropTypes.string.isRequired,
+          id: PropTypes.number
+        })
+      )
+    };
+
     static defaultProps = {
         comments: []
     }

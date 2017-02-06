@@ -1,14 +1,23 @@
-import React, {Component} from 'react'
-import Article from './Article'
+import React, {Component, PropTypes} from 'react';
+import Article from './Article';
 
 export default class ArticleList extends Component {
+    static propTypes = {
+      articles: React.PropTypes.arrayOf(
+        React.PropTypes.shape({
+          title: PropTypes.string.isRequired,
+          text: PropTypes.string.isRequired,
+          comments: PropTypes.array
+        })
+      ).isRequired
+    };
 
     state = {
-        openArticleId: null
-    }
+      openArticleId: null
+    };
 
     render() {
-        const {articles} = this.props
+        const {articles} = this.props;
         const articleElements = articles.map((article) => <li key={article.id}>
             <Article
                 article={article}
@@ -20,17 +29,17 @@ export default class ArticleList extends Component {
                 {articleElements}
             </ul>
         )
-    }
+    };
 
     toggleOpenArticle = openArticleId => ev => {
-        ev && ev.preventDefault && ev.preventDefault()
+        ev && ev.preventDefault && ev.preventDefault();
         this.setState({
             openArticleId
-        })
-    }
+        });
+    };
 }
 
 
 ArticleList.defaultProps = {
     articles: []
-}
+};
