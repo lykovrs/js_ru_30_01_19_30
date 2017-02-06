@@ -4,9 +4,11 @@ import Comment from './Comment';
 export default class CommentsList extends Component {
   state = {
     isOpen: false,
+      //это совсем не нужно в state, ты можешь получить текст из прошлой переменной
     buttonText: "Show"
   }
 
+//Зачем тебе эти пустые конструкторы?
   constructor(props) {
     super();
   }
