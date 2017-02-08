@@ -16,16 +16,16 @@ class CommentList extends Component {
         comments: []
     }
     componentDidMount() {
-        console.log('---', 'mounted')
+        // console.log('---', 'mounted')
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('---', this.props, nextProps)
+        // console.log('---', this.props, nextProps)
     }
 
 
     componentWillUnmount() {
-        console.log('---', 'unmounting')
+        // console.log('---', 'unmounting')
     }
 
     state = {

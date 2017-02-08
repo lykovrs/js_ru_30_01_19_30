@@ -1,5 +1,5 @@
 //HOC - Higher Order Component === decorator
-import React from 'react'
+import React from 'react';
 
 export default (Component) => class WrappedComponent extends React.Component {
     state = {
@@ -13,6 +13,6 @@ export default (Component) => class WrappedComponent extends React.Component {
     }
 
     render() {
-        return <Component {...this.props} {...this.state} toggleOpen={this.toggleOpen}/>
+        return <Component {...this.props} {...this.state}  toggleOpen={this.toggleOpen}/>
     }
 }
