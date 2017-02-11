@@ -10,6 +10,7 @@ class ArticleList extends Component {
                 article={article}
                 isOpen={isOpenItem(article.id)}
                 toggleOpen={toggleOpenItem(article.id)}/>
+
         </li>)
         return (
             <ul>

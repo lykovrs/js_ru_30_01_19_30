@@ -1,12 +1,16 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+import FormComment from './Form'
 
 function Comment(props) {
     const {text, user} = props.comment
     return (
+      <section>
         <div>
             {text}
             {user && <b> by {user}</b>}
         </div>
+        <FormComment />
+      </section>
     )
 }
 

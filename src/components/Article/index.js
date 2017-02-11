@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 import {findDOMNode} from 'react-dom'
 import CommentList from '../CommentList'
+import FormComment from '../Form'
 import CSSTransition from 'react-addons-css-transition-group'
 import './style.css'
 
@@ -54,6 +55,7 @@ class Article extends Component {
         return (
             <section>
                 {text}
+                <FormComment />
                 <CommentList comments={comments} ref = {this.getCommentsRef} />
             </section>
         )
