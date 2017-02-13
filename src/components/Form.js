@@ -1,5 +1,6 @@
 import React, {Component,  PropTypes } from 'react';
 
+//лучше когда названия компонентов и файлов соответствуют
 class FormComment extends Component  {
     constructor(props) {
       super(props);
@@ -13,6 +14,7 @@ class FormComment extends Component  {
     };
 
     handleChange(event) {
+        //ок, но сделал бы уже const {name, value} = e.target тогда
       const target = event.target;
       const name = target.name;
       const value = target.value;
